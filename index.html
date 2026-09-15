@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do Resíduo à Matéria-Prima | Simbiose Industrial</title>
+    <meta name="description" content="Plataforma de simbiose industrial e economia circular conectando empresas que geram resíduos a empresas que os transformam em novas matérias-primas.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="custom-cursor" id="custom-cursor"></div>
+    <div class="cursor-dot" id="cursor-dot"></div>
+
+    <canvas id="particles-canvas"></canvas>
+
+    <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+    <button class="scroll-top" id="scroll-top" aria-label="Voltar ao topo">
+        <svg viewBox="0 0 24 24"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
+    </button>
+
+    <header id="header">
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2C7.5 5.5 3 9 3 14a9 9 0 0 0 18 0c0-5-4.5-8.5-9-12zm0 18a7 7 0 0 1-7-7c0-3.5 2.8-6.2 5.4-8.3C9 7.5 8 10 8 12.5c0 2.5 1.8 4.5 4 4.5s4-2 4-4.5c0-2.5-1-5-2.4-6.8 2.6 2.1 5.4 4.8 5.4 8.3a7 7 0 0 1-7 7z"/>
+                    </svg>
+                    <h1>DO RESÍDUO À MATÉRIA-PRIMA</h1>
+                </div>
+                <span>Simbiose Industrial para a Economia Circular</span>
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-list">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav>
+                <ul id="nav-list">
+                    <li><a href="#como-funciona" class="nav-link">Como Funciona</a></li>
+                    <li><a href="#oportunidades" class="nav-link">Oportunidades</a></li>
+                    <li><a href="#estatisticas" class="nav-link">Impacto</a></li>
+                    <li><a href="#buscar" class="nav-link">Match Industrial</a></li>
+                    <li><a href="#cadastrar" class="nav-link">Cadastrar Resíduo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="hero" id="inicio">
+        <div class="container hero-content">
+            <div class="hero-badge">
+                <span class="dot" aria-hidden="true"></span>
+                CONECTANDO INDÚSTRIAS · ECONOMIA CIRCULAR
+            </div>
+            <h2>Transformando resíduos em <span class="highlight">novas oportunidades.</span></h2>
+            <p>Conectamos empresas que possuem resíduos a empresas que podem transformá-los em novos insumos, promovendo a simbiose industrial e a economia circular.</p>
+            <div class="hero-buttons">
+                <a href="#oportunidades" class="btn btn-primary">Encontrar oportunidade
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="#cadastrar" class="btn btn-secondary">Cadastrar resíduo</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="fluxo-section bg-green-subtle">
+        <div class="container">
+            <h3 class="section-title">Simbiose Industrial</h3>
+            <p class="section-subtitle">Um ecossistema produtivo onde nada se perde, tudo se transforma.</p>
+            <div class="fluxo-container reveal">
+                <div class="fluxo-item">Empresa Geradora</div>
+                <div class="fluxo-seta">➔</div>
+                <div class="fluxo-item destaque">Resíduo</div>
+                <div class="fluxo-seta">➔</div>
+                <div class="fluxo-item plataforma">Plataforma</div>
+                <div class="fluxo-seta">➔</div>
+                <div class="fluxo-item match">Match</div>
+                <div class="fluxo-seta">➔</div>
+                <div class="fluxo-item destaque-verde">Nova Matéria-Prima</div>
+                <div class="fluxo-seta">➔</div>
+                <div class="fluxo-item">Empresa Receptora</div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="como-funciona" id="como-funciona">
+        <div class="container">
+            <h3 class="section-title">Como Funciona</h3>
+            <p class="section-subtitle">Quatro passos simples para transformar resíduos em valor.</p>
+            <div class="grid-4">
+                <div class="card-step reveal reveal-delay-1">
+                    <div class="step-num">1</div>
+                    <h4>CADASTRE</h4>
+                    <p>A empresa informa qual resíduo possui, quantidade e características do material.</p>
+                </div>
+                <div class="card-step reveal reveal-delay-2">
+                    <div class="step-num">2</div>
+                    <h4>ANALISE</h4>
+                    <p>A plataforma organiza e cruza as informações estruturando um banco de dados inteligente.</p>
+                </div>
+                <div class="card-step reveal reveal-delay-3">
+                    <div class="step-num">3</div>
+                    <h4>CONECTE</h4>
+                    <p>O sistema identifica automaticamente empresas interessadas naquele insumo específico.</p>
+                </div>
+                <div class="card-step reveal reveal-delay-4">
+                    <div class="step-num">4</div>
+                    <h4>CIRCULARIZE</h4>
+                    <p>O resíduo retorna ao ciclo produtivo com alto valor agregado e menor custo de aquisição.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="importancia bg-light">
+        <div class="container">
+            <div class="grid-2">
+                <div>
+                    <h3 class="section-title left">Por que isso importa?</h3>
+                    <div class="info-box reveal">
+                        <p><strong>Economia Linear:</strong> Segue o modelo ultrapassado de extrair ➔ produzir ➔ descartar.</p>
+                        <p><strong>Economia Circular:</strong> Materiais permanecem em uso no ecossistema produtivo pelo maior tempo possível.</p>
+                        <p>A <strong>simbiose industrial</strong> amplia esse conceito ao permitir que o resíduo de uma empresa se torne o recurso principal de outra.</p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="section-title left">Impactos Gerados</h3>
+                    <ul class="impact-list">
+                        <li class="reveal reveal-delay-1"><strong>Ambiental:</strong> Redução drástica de descarte em aterros e valorização dos resíduos industriais.</li>
+                        <li class="reveal reveal-delay-2"><strong>Econômico:</strong> Redução de custos na aquisição de matérias-primas primárias.</li>
+                        <li class="reveal reveal-delay-3"><strong>Industrial:</strong> Criação de novas redes diretas de cooperação entre empresas da região.</li>
+                        <li class="reveal reveal-delay-4"><strong>Tecnológico:</strong> Uso de inteligência de dados para facilitação instantânea de oportunidades.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="exemplos-oportunidades" id="oportunidades">
+        <div class="container">
+            <h3 class="section-title">Conexões Frequentes</h3>
+            <p class="section-subtitle">Exemplos reais de sinergia entre diferentes setores industriais.</p>
+            <div class="grid-3 mb-4">
+                <div class="card-exemplo reveal reveal-delay-1">
+                    <span class="badge">Alimentos &amp; Biotec</span>
+                    <p><strong>Origem:</strong> Indústria de Processamento</p>
+                    <p><strong>Resíduo:</strong> Casca e bagaço vegetal</p>
+                    <p><strong>Destino:</strong> Fábrica de Biomateriais</p>
+                </div>
+                <div class="card-exemplo reveal reveal-delay-2">
+                    <span class="badge">Construção Civil</span>
+                    <p><strong>Origem:</strong> Demolição e Infraestrutura</p>
+                    <p><strong>Resíduo:</strong> Rejeitos minerais</p>
+                    <p><strong>Destino:</strong> Fabricante de Pré-moldados</p>
+                </div>
+                <div class="card-exemplo reveal reveal-delay-3">
+                    <span class="badge">Madeira &amp; Móveis</span>
+                    <p><strong>Origem:</strong> Indústria Moveleira</p>
+                    <p><strong>Resíduo:</strong> Serragem e Cavacos</p>
+                    <p><strong>Destino:</strong> Fabricante de Painéis MDF</p>
+                </div>
+            </div>
+
+            <h3 class="section-title mt-4">Painel de Oportunidades Ativas</h3>
+            <p class="text-center tag-status-active mb-4">
+                <span class="pulse-dot" aria-hidden="true"></span> SISTEMA ATUALIZADO EM TEMPO REAL
+            </p>
+            <div class="grid-3" id="painel-oportunidades">
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="estatisticas bg-green-subtle" id="estatisticas">
+        <div class="container">
+            <h3 class="section-title">Impacto das Conexões</h3>
+            <p class="section-subtitle">Dados consolidados da nossa rede de simbiose industrial.</p>
+
+            <div class="grid-3 mb-4">
+                <div class="impacto-card reveal reveal-delay-1">
+                    <span class="impacto-numero" id="num-toneladas" data-target="142.8" data-decimals="1">0</span>
+                    <span class="impacto-texto">Ton. Reaproveitadas</span>
+                </div>
+                <div class="impacto-card reveal reveal-delay-2">
+                    <span class="impacto-numero" id="num-conexoes" data-target="94" data-decimals="0">0</span>
+                    <span class="impacto-texto">Conexões Realizadas</span>
+                </div>
+                <div class="impacto-card reveal reveal-delay-3">
+                    <span class="impacto-numero" id="num-reducao" data-target="38" data-decimals="0" data-suffix="%">0%</span>
+                    <span class="impacto-texto">Redução em Aterros</span>
+                </div>
+            </div>
+
+            <div class="grid-2 align-center">
+                <div class="chart-container reveal">
+                    <div class="chart-title">Recuperação por categoria (%)</div>
+                    <div class="bar-chart">
+                        <div class="bar-item">
+                            <span class="bar-label">Orgânicos</span>
+                            <div class="bar-track">
+                                <div class="bar-fill" data-target="85"><span class="bar-value">85%</span></div>
+                            </div>
+                        </div>
+                        <div class="bar-item">
+                            <span class="bar-label">Madeira</span>
+                            <div class="bar-track">
+                                <div class="bar-fill" data-target="72"><span class="bar-value">72%</span></div>
+                            </div>
+                        </div>
+                        <div class="bar-item">
+                            <span class="bar-label">Minerais</span>
+                            <div class="bar-track">
+                                <div class="bar-fill" data-target="58"><span class="bar-value">58%</span></div>
+                            </div>
+                        </div>
+                        <div class="bar-item">
+                            <span class="bar-label">Plásticos</span>
+                            <div class="bar-track">
+                                <div class="bar-fill" data-target="46"><span class="bar-value">46%</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-container reveal reveal-delay-2">
+                    <div class="chart-title">Custos reduzidos por setor</div>
+                    <div class="bar-chart">
+                        <div class="bar-item">
+                            <span class="bar-label">Alimentos</span>
+                            <div class="bar-track">
+                                <div class="bar-fill" data-target="64"><span class="bar-value">R$ 640k</span></div>
+                            </div>
+                        </div>
+                        <div class="bar-item">
+                            <span class="bar-label">Construção</span>
+                            <div class="bar-track">
+                                <div class="bar-fill" data-target="52"><span class="bar-value">R$ 520k</span></div>
+                            </div>
+                        </div>
+                        <div class="bar-item">
+                            <span class="bar-label">Moveleira</span>
+                            <div class="bar-track">
+                                <div class="bar-fill" data-target="38"><span class="bar-value">R$ 380k</span></div>
+                            </div>
+                        </div>
+                        <div class="bar-item">
+                            <span class="bar-label">Plásticos</span>
+                            <div class="bar-track">
+                                <div class="bar-fill" data-target="26"><span class="bar-value">R$ 260k</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="match-section bg-light" id="buscar">
+        <div class="container">
+            <h3 class="section-title">Algoritmo de Match Industrial</h3>
+            <p class="section-subtitle">Nossa inteligência de dados cruza disponibilidade e demanda em segundos.</p>
+            <div class="grid-2 align-center">
+                <div class="form-buscar reveal">
+                    <h4>Buscar Matéria-Prima Disponível</h4>
+                    <form id="form-busca" novalidate>
+                        <select id="categoria-busca" required>
+                            <option value="">Selecione a Categoria...</option>
+                            <option value="madeira">Madeira e Derivados</option>
+                            <option value="mineral">Minerais e Construção</option>
+                            <option value="organico">Orgânicos e Biomassa</option>
+                            <option value="plastico">Polímeros e Plásticos</option>
+                        </select>
+                        <input type="text" id="cidade-busca" placeholder="Digite a Cidade ou Região" required>
+                        <button type="submit" class="btn btn-primary w-100">
+                            Verificar Compatibilidade
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+                        </button>
+                    </form>
+                </div>
+                <div class="match-display hidden" id="match-resultado">
+                    <div class="match-box">
+                        <div class="match-item">Resíduo Disponível<br><small id="match-categoria">—</small></div>
+                        <div class="match-percent" id="match-percent">—</div>
+                        <div class="match-item">Sua Demanda<br><small id="match-cidade">—</small></div>
+                    </div>
+                    <p class="text-center match-aviso" id="match-aviso-texto">Alta compatibilidade detectada: A composição química e o volume atendem aos requisitos técnicos da sua planta industrial.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="cadastro-impacto bg-green-subtle" id="cadastrar">
+        <div class="container">
+            <h3 class="section-title">Participe do Ciclo</h3>
+            <p class="section-subtitle">Cadastre seu resíduo e faça parte da rede de economia circular.</p>
+            <div class="grid-2">
+                <div class="form-cadastro-box reveal">
+                    <h3 class="section-title left">Cadastrar Novo Resíduo</h3>
+                    <form id="form-cadastro" novalidate>
+                        <input type="text" id="cad-empresa" placeholder="Razão Social da Empresa" required>
+                        <input type="text" id="cad-residuo" placeholder="Nome do Resíduo / Insumo" required>
+                        <select id="cad-categoria" required>
+                            <option value="">Categoria do Material...</option>
+                            <option value="madeira">Madeira</option>
+                            <option value="plastico">Plástico</option>
+                            <option value="organico">Orgânico</option>
+                            <option value="mineral">Mineral</option>
+                        </select>
+                        <div class="grid-2-form">
+                            <input type="number" id="cad-quantidade" placeholder="Quantidade" min="0" step="0.1" required>
+                            <select id="cad-unidade" required>
+                                <option value="kg">Kg</option>
+                                <option value="ton">Toneladas</option>
+                                <option value="litros">Litros</option>
+                            </select>
+                        </div>
+                        <input type="text" id="cad-localizacao" placeholder="Localização (Ex: Picos - PI)" required>
+                        <input type="text" id="cad-frequencia" placeholder="Frequência de Geração (Ex: Mensal)" required>
+                        <textarea id="cad-descricao" placeholder="Descrição das propriedades físicas e potencial de uso" rows="3" required></textarea>
+                        <button type="submit" class="btn btn-primary w-100">
+                            Disponibilizar Resíduo
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="impacto-box reveal reveal-delay-2">
+                    <h3 class="section-title left">Indicadores Consolidados</h3>
+                    <p class="tag-status-active mb-3">
+                        <span class="pulse-dot" aria-hidden="true"></span> MÉTRICAS ACUMULADAS DA PLATAFORMA
+                    </p>
+                    <div class="impacto-grid">
+                        <div class="impacto-card">
+                            <span class="impacto-numero" data-target="142.8" data-decimals="1">0</span>
+                            <span class="impacto-texto">Ton. Reaproveitadas</span>
+                        </div>
+                        <div class="impacto-card">
+                            <span class="impacto-numero" data-target="94" data-decimals="0">0</span>
+                            <span class="impacto-texto">Conexões Realizadas</span>
+                        </div>
+                        <div class="impacto-card">
+                            <span class="impacto-numero" data-target="38" data-decimals="0" data-suffix="%">0%</span>
+                            <span class="impacto-texto">Redução em Aterros</span>
+                        </div>
+                        <div class="impacto-card">
+                            <span class="impacto-numero" data-target="1400000" data-decimals="0" data-currency="R$ ">0</span>
+                            <span class="impacto-texto">Economia Gerada</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container text-center">
+            <p>© 2026 DO RESÍDUO À MATÉRIA-PRIMA · Simbiose Industrial</p>
+            <div class="footer-links">
+                <a href="#como-funciona">Como Funciona</a>
+                <a href="#oportunidades">Oportunidades</a>
+                <a href="#buscar">Match Industrial</a>
+            </div>
+            <p style="margin-top:12px; opacity:0.6; font-size:0.78rem;">Feito para um futuro mais verde e circular.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
